@@ -4,15 +4,21 @@ with open('VERSION.txt', 'r') as f:
     version = f.read().strip()
 
 setuptools.setup(
-    name="odoo-addons-oca-currency",
+    name="odoo12-addons-oca-currency",
     description="Meta package for oca-currency Odoo addons",
     version=version,
     install_requires=[
-        'odoo-addon-currency_rate_update>=16.0dev,<16.1dev',
+        'odoo12-addon-account_cryptocurrency',
+        'odoo12-addon-currency_monthly_rate',
+        'odoo12-addon-currency_rate_inverted',
+        'odoo12-addon-currency_rate_update',
+        'odoo12-addon-currency_rate_update_oxr',
+        'odoo12-addon-currency_rate_update_transferwise',
+        'odoo12-addon-currency_rate_update_xe',
     ],
     classifiers=[
         'Programming Language :: Python',
         'Framework :: Odoo',
-        'Framework :: Odoo :: 16.0',
+        'Framework :: Odoo :: 12.0',
     ]
 )
